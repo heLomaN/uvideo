@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="span9">
+    <section id="content" class="body">
+        <h2 class="content-title">{{question.question}}</h2>
+        
+        <div class="body">
+            <video width="800" height="540"
+            controls="controls" poster="/static/codecSupportMatrix_color.png">
+                <source src="/static/{{question.file_path.url}}" />您的浏览器不支持 video 标签
+            </video>
+        </div>
+        
+    </section>
+</div>
+{% endblock %}

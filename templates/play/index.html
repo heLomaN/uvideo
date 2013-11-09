@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="span9">
+    <h1>所有视频</h1>
+
+<table class="table">
+    <tbody>
+        {% if question_list %}
+        {% for question in question_list %}
+            <tr>
+                <td>{{ question.paper }}</td>
+                <td><a href="/play/{{ question.id }}/">{{ question.question }}</a></td>
+            </tr>
+        {% endfor %}
+        {% else %}
+            <tr>
+                <td> </td>
+                <td><a >No questions are available.</a></td>
+            </tr>
+        {% endif %}
+
+    </tbody>
+</table>
+</div>
+{% endblock %}
+
+
+
+
+
+
